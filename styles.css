@@ -1210,13 +1210,14 @@ p {
     box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
 }
 
-.facebook-btn {
-    background: linear-gradient(135deg, #1877F2 0%, #166FE5 100%);
+
+.call-btn {
+    background: var(--gradient-primary);
 }
 
-.facebook-btn:hover {
+.call-btn:hover {
     transform: scale(1.15);
-    box-shadow: 0 10px 30px rgba(24, 119, 242, 0.4);
+    box-shadow: var(--shadow-primary);
 }
 
 /* ============================================
