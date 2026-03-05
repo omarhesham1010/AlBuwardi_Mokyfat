@@ -18,7 +18,7 @@
     --secondary-dark: #0D9488;
     --accent-color: #F59E0B;
     --accent-light: #FBBF24;
-    
+
     /* Neutral Colors */
     --text-primary: #1F2937;
     --text-secondary: #6B7280;
@@ -30,12 +30,12 @@
     --gray-300: #D1D5DB;
     --dark-bg: #111827;
     --dark-secondary: #1F2937;
-    
+
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #14B8A6 100%);
     --gradient-hero: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
     --gradient-card: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
-    
+
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -43,7 +43,7 @@
     --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     --shadow-primary: 0 10px 40px rgba(99, 102, 241, 0.3);
-    
+
     /* Border Radius */
     --radius-sm: 6px;
     --radius: 12px;
@@ -51,7 +51,7 @@
     --radius-lg: 24px;
     --radius-xl: 32px;
     --radius-full: 9999px;
-    
+
     /* Transitions */
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
@@ -83,7 +83,12 @@ body {
 /* ============================================
    TYPOGRAPHY
    ============================================ */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
@@ -91,21 +96,21 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: -0.02em;
 }
 
-h1 { 
+h1 {
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 800;
 }
 
-h2 { 
+h2 {
     font-size: clamp(1.75rem, 4vw, 2.75rem);
     font-weight: 700;
 }
 
-h3 { 
+h3 {
     font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
-h4 { 
+h4 {
     font-size: clamp(1.25rem, 2.5vw, 1.5rem);
 }
 
@@ -308,7 +313,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
+    background:
         radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
     opacity: 0.6;
@@ -686,7 +691,7 @@ p {
     font-size: 1.5rem;
 }
 
-.service-card > p {
+.service-card>p {
     text-align: center;
     margin-bottom: 24px;
     color: var(--text-secondary);
@@ -1325,6 +1330,33 @@ p {
     color: var(--gray-300);
 }
 
+.developer-credit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: #6366F1;
+    direction: rtl;
+}
+
+.developer-credit a {
+    color: var(--gray-300);
+    text-decoration: none;
+    font-size: 16px;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.developer-credit a:hover {
+    color: var(--primary-light);
+    transform: translateY(-2px);
+}
+
 /* ============================================
    ANIMATIONS
    ============================================ */
@@ -1333,6 +1365,7 @@ p {
         opacity: 0;
         transform: translateY(40px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1343,6 +1376,7 @@ p {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -1353,6 +1387,7 @@ p {
         opacity: 0;
         transform: translateX(-40px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -1367,13 +1402,14 @@ p {
    RESPONSIVE DESIGN
    ============================================ */
 @media (max-width: 1024px) {
+
     .about-content,
     .warranty-content,
     .contact-content {
         grid-template-columns: 1fr;
         gap: 32px;
     }
-    
+
     .warranty-terms {
         position: static;
     }
@@ -1383,7 +1419,7 @@ p {
     .container {
         padding: 0 20px;
     }
-    
+
     .nav-menu {
         position: fixed;
         top: 70px;
@@ -1399,38 +1435,38 @@ p {
         box-shadow: var(--shadow-lg);
         gap: 0;
     }
-    
+
     .nav-menu.active {
         right: 0;
     }
-    
+
     .nav-link {
         padding: 16px;
         font-size: 1.1rem;
     }
-    
+
     .nav-toggle {
         display: flex;
     }
-    
+
     .nav-toggle.active .bar:nth-child(1) {
         transform: rotate(45deg) translate(8px, 8px);
     }
-    
+
     .nav-toggle.active .bar:nth-child(2) {
         opacity: 0;
     }
-    
+
     .nav-toggle.active .bar:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -7px);
     }
-    
+
     .services-grid,
     .gallery-grid,
     .reviews-grid {
         grid-template-columns: 1fr;
     }
-    
+
     /* Reset masonry grid on mobile */
     .gallery-item:nth-child(1),
     .gallery-item:nth-child(4),
@@ -1441,33 +1477,33 @@ p {
         grid-column: span 1;
         grid-row: span 1;
     }
-    
+
     .gallery-grid {
         grid-auto-rows: 250px;
         gap: 16px;
     }
-    
+
     .quick-buttons {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .hero {
         min-height: 80vh;
         padding: 100px 24px 60px;
     }
-    
+
     .contact-buttons {
         bottom: 20px;
         left: 20px;
         gap: 12px;
     }
-    
+
     .contact-btn {
         width: 56px;
         height: 56px;
         font-size: 1.25rem;
     }
-    
+
     .about-text,
     .booking-info,
     .service-card {
@@ -1476,54 +1512,59 @@ p {
 }
 
 @media (max-width: 480px) {
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.75rem; }
-    
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
     .quick-buttons {
         grid-template-columns: 1fr;
     }
-    
+
     .hero {
         min-height: 70vh;
         padding: 100px 20px 40px;
     }
-    
+
     .hero-text h1 {
         font-size: 2.5rem;
         margin-bottom: 16px;
     }
-    
+
     .hero-text h2 {
         font-size: 1.5rem;
         margin-bottom: 16px;
     }
-    
+
     .hero-text p {
         font-size: 1rem;
         margin-bottom: 32px;
     }
-    
+
     .hero-buttons {
         flex-direction: column;
         width: 100%;
         gap: 16px;
     }
-    
+
     .btn {
         width: 100%;
         justify-content: center;
     }
-    
+
     .contact-buttons {
         flex-direction: row;
         bottom: 16px;
         left: 16px;
     }
-    
+
     .section-header {
         margin-bottom: 48px;
     }
-    
+
     .about,
     .services,
     .warranty,
@@ -1533,20 +1574,20 @@ p {
     .contact {
         padding: 60px 0;
     }
-    
+
     .gallery-grid {
         grid-auto-rows: 220px;
         gap: 12px;
     }
-    
+
     .gallery-overlay {
         padding: 24px;
     }
-    
+
     .gallery-overlay h4 {
         font-size: 1.25rem;
     }
-    
+
     .gallery-overlay p {
         font-size: 0.9rem;
     }
@@ -1573,5 +1614,7 @@ p {
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
